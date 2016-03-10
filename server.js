@@ -25,7 +25,7 @@ app.use('', function(req, res) {
 app.listen(process.env.PORT || 3000);
 
 if (process.env.PORT === undefined) {
-    console.log("Server Started at port : " + 3300);
+    console.log("Server Started at port : " + 3000);
 }
 else {
     console.log("Server Started at port : " + process.env.PORT);

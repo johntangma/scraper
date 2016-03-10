@@ -1,8 +1,11 @@
 import cheerio from "cheerio";
 import request from "request-promise";
 
+const HOME_URL = "http://www.powerball.com/pb_home.asp";
+const WINNUMS_URL = "http://www.powerball.com/powerball/winnums-text.txt";
+
 export async function getJackpot(req, res, next){
-    const html = await request("http://www.powerball.com/pb_home.asp");
+    const html = await request(HOME_URL);
     const $ = cheerio.load(html);
     const selected = $("div#mainContent table").eq(0).find("tr").eq(1).find("td").last().text().trim();
 
@@ -23,7 +26,7 @@ export async function getJackpot(req, res, next){
 }
 
 export async function getWinningNumbers(req, res, next){
-    const html = await request("http://www.powerball.com/powerball/winnums-text.txt");
+    const html = await request(WINNUMS_URL);
     const latestLine = html.split("\n")[1].trim();
 
     let winningNumbers = latestLine.split("  ").splice(1);
