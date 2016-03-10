@@ -21,7 +21,7 @@ export async function getJackpot(req, res, next){
         multiplier = Math.pow(10, 9);
     }
 
-    const jackpotInCents = jackpot * multiplier * Math.pow(10,3);
+    const jackpotInCents = jackpot * multiplier * Math.pow(10,2);
     return res.send({ data: jackpotInCents });
 }
 
