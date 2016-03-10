@@ -10,6 +10,6 @@
 
 ### Testing api
 
-1. `http://localhost:3000/api/jackpot'
+1. `http://localhost:3000/api/jackpot`
 
 2. `http://localhost:3000/api/winning-numbers`
