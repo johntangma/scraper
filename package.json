@@ -1,0 +1,25 @@
+{
+  "name": "Scraper",
+  "decription": "Node Scraper",
+  "author": "Jian",
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "nodemon --exec ./node_modules/.bin/babel-node server.js",
+    "postinstall": "babel . --optional runtime --ignore node_modules --out-dir dist"
+  },
+  "dependencies": {
+    "babel": "^5.6.14",
+    "babel-runtime": "^5.8.20",
+    "body-parser": "^1.13.2",
+    "cheerio": "latest",
+    "express": "latest",
+    "express-promise-router": "0.0.9",
+    "morgan": "~1.6.0",
+    "request-promise": "^2.0.1"
+  }
+}
